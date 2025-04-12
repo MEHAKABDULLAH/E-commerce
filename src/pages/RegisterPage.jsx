@@ -19,7 +19,7 @@ const RegisterPage = () => {
     setError('');
 
     try {
-      const { data } = await axios.post('https://backend-delta-nine-60.vercel.app/api/auth/register', {
+      const { data } = await axios.post('https://backend-delta-nine-60.vercel.app/api/auth/users/register', {
         email,
         password,
         name,
