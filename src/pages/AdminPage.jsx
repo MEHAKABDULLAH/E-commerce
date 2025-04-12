@@ -35,7 +35,7 @@ const AdminPanel = () => {
   };
 
   const handleDeleteProduct = (productId) => {
-    axios.delete(`https://backend-delta-nine-60.vercel.app/api/products${productId}`)
+    axios.delete(`https://backend-delta-nine-60.vercel.app/api/products/${productId}`)
       .then(() => {
         setProducts(products.filter(product => product._id !== productId));
         message.success('Product deleted');
@@ -54,7 +54,7 @@ const AdminPanel = () => {
     // Debugging: Log the product ID to ensure it's correct
     console.log('Updating product with ID:', editingProduct._id);
 
-    axios.put(`https://backend-delta-nine-60.vercel.app/api/products${editingProduct._id}`, editingProduct)
+    axios.put(`https://backend-delta-nine-60.vercel.app/api/products/${editingProduct._id}`, editingProduct)
       .then(response => {
         // Update the products list with the updated product
         const updatedProducts = products.map(product =>
