@@ -1,0 +1,51 @@
+* {
+  background-color: white;
+}
+
+/* Styling the navbar */
+.navbar {
+  padding: 10px 0;
+}
+
+/* Logo styling */
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Styling for nav links */
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+/* Style for the buttons container */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; /* Push buttons to the right */
+}
+
+/* Common button styling */
+.nav-btn {
+  padding: 10px 20px;
+  background-color: rgb(225, 183, 28); /* Button color */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.nav-btn:hover {
+  background-color: #f9c517; /* Slightly lighter shade */
+}
+
+/* For the nav items */
+.me-auto {
+  padding-left: 40px;
+}

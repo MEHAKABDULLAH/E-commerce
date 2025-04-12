@@ -1,0 +1,101 @@
+/* Main page styling */
+.main-page {
+    height: 100vh;
+    background-image: url('./main.jpg'); /* Replace with your image URL */
+    background-position: center;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;  /* To ensure no overflow outside the viewport */
+}
+
+/* Add a blur overlay on the background */
+.main-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);  /* Semi-transparent black overlay */
+    filter: blur(5px);  /* Applying blur effect */
+    z-index: -1;  /* Ensuring it stays in the background */
+}
+
+/* Content container */
+.content-container {
+    padding: 20px;
+    background: none;
+    border-radius: 10px;
+    max-width: 90%;
+    width: 600px; /* Ensuring the content doesn't stretch too much */
+    box-sizing: border-box;
+    position: relative;  /* Ensuring content stays above the background */
+    z-index: 1;  /* Keeping the content above the blurred background */
+}
+
+/* Main heading styles */
+.main-heading {
+    font-size: 3rem;
+    background: none;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: black; /* Change text color to black */
+}
+
+/* Subheading styles */
+.main-subheading {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    background: none;
+    font-weight: 300;
+    background: none;
+    color: black; /* Change text color to black */
+}
+
+/* Styling for the call-to-action buttons */
+.cta-buttons {
+    display: flex;
+   background: none;
+
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Button style */
+.cta-button {
+    padding: 15px 30px;
+  
+    background-color: rgb(225, 183, 28); /* Button color */
+   color: white;
+   
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.cta-button:hover {
+    background-color: #f9c517; /* Lighter shade on hover */
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2.5rem;
+    }
+
+    .main-subheading {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
