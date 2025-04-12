@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Drawer, Button, Spin, Input, Form, Badge ,message } from 'antd';
 import ProductCard from '../components/ProductCard';
+import { useNavigate } from 'react-router-dom';
 import { ShoppingCartOutlined } from '@ant-design/icons';
 
 import './HomePage.css';
@@ -14,6 +15,7 @@ const HomePage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [userId, setUserId] = useState(null);
   const [checkoutInfo, setCheckoutInfo] = useState({ name: '', address: '', phoneNumber: '' });
+  const navigate = useNavigate();
  
   const [userInfo, setUserInfo] = useState(null); // Optional: to display username
 
@@ -87,6 +89,7 @@ const HomePage = () => {
 
       console.log('Order Response:', response.data);
     message.success('Order Placed sucessfully!')
+    navigate('/E-commerce');
       setCart([]);
       setCheckoutInfo({ name: '', address: '', phoneNumber: '' });
       setDrawerOpen(false);
