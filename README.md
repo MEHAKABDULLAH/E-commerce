@@ -1,16 +1,41 @@
-<<<<<<< HEAD
-# React + Vite
+💎 Jewelry E-Commerce App
+A simple yet elegant e-commerce web application for jewelry shopping — complete with user authentication, a clean UI, and full admin control over product management.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Overview
+This project is a small-scale jewelry e-commerce platform where users can browse beautiful products and place orders after signing in. The application ensures smooth user experience and secure operations, both on the customer and admin side.
 
-Currently, two official plugins are available:
+🔐 Features
+User Authentication:
+Users can sign up and log in securely to access shopping features.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Product Display:
+All jewelry products are stored in MongoDB and fetched in real-time for display on the front end.
 
-## Expanding the ESLint configuration
+Admin Dashboard:
+Admins have full control to:
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# E-commerce
->>>>>>> 57178671f8b3c660387e151954a662656fccc6b3
+Add new products
+
+Update existing ones
+
+Delete any item as needed
+
+Order Placement:
+Only logged-in users can place orders. If a user is not authenticated, they won't be able to proceed with checkout — ensuring that each order is tied to a real user account.
+
+Modern UI:
+Built using Ant Design to deliver a sleek and responsive user interface that looks great on all devices.
+
+🛠️ Tech Stack
+Frontend: React.js, Ant Design
+
+Backend: Node.js, Express.js
+
+Database: MongoDB
+
+Authentication: JWT (or any other auth method you’ve used — let me know if you want to include details)
+
+📦 Project Scope
+This is a personal mini project created to practice and showcase skills in full-stack development, especially focusing on building a functional and attractive e-commerce experience.
+
+
