@@ -74,7 +74,7 @@ const HomePage = () => {
    
 
     try {
-      const response = await axios.post('https://backend-delta-nine-60.vercel.app/api/orders', {
+      const response = await axios.post('https://backend-delta-nine-60.vercel.app/api/order', {
         userId,
         name,
         address,
