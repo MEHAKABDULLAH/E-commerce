@@ -19,7 +19,7 @@ const LoginPage = () => {
     setError(''); // Clear previous error
 
     try {
-      const { data } = await axios.post('https://backend-delta-nine-60.vercel.app/', { email, password });
+      const { data } = await axios.post('https://backend-delta-nine-60.vercel.app/api/auth/login', { email, password });
       localStorage.setItem('token', data.token);
       localStorage.setItem('role', data.role);
       localStorage.setItem('userId', data.user._id);

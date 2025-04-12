@@ -14,7 +14,7 @@ const AdminPanel = () => {
   const [editingProduct, setEditingProduct] = useState(null);
 
   useEffect(() => {
-    axios.get('https://backend-delta-nine-60.vercel.app/')
+    axios.get('https://backend-delta-nine-60.vercel.app/api/products')
       .then(response => setProducts(response.data))
       .catch(() => message.error('Error fetching products'));
   }, []);
@@ -25,7 +25,7 @@ const AdminPanel = () => {
       return message.warning('Please fill all fields');
     }
 
-    axios.post('https://backend-delta-nine-60.vercel.app/', newProduct)
+    axios.post('https://backend-delta-nine-60.vercel.app/api/products', newProduct)
       .then(response => {
         setProducts([...products, response.data]);
         setNewProduct({ name: '', description: '', price: '', image: '', stock: '' });
@@ -35,7 +35,7 @@ const AdminPanel = () => {
   };
 
   const handleDeleteProduct = (productId) => {
-    axios.delete(`https://backend-delta-nine-60.vercel.app/${productId}`)
+    axios.delete(`https://backend-delta-nine-60.vercel.app/api/products${productId}`)
       .then(() => {
         setProducts(products.filter(product => product._id !== productId));
         message.success('Product deleted');
@@ -54,7 +54,7 @@ const AdminPanel = () => {
     // Debugging: Log the product ID to ensure it's correct
     console.log('Updating product with ID:', editingProduct._id);
 
-    axios.put(`https://backend-delta-nine-60.vercel.app/${editingProduct._id}`, editingProduct)
+    axios.put(`https://backend-delta-nine-60.vercel.app/api/products${editingProduct._id}`, editingProduct)
       .then(response => {
         // Update the products list with the updated product
         const updatedProducts = products.map(product =>

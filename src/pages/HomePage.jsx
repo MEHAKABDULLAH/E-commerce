@@ -21,7 +21,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('https://backend-delta-nine-60.vercel.app/');
+        const response = await axios.get('https://backend-delta-nine-60.vercel.app/api/products');
         setProducts(response.data);
       } catch (error) {
         setError('Failed to load products');
@@ -39,7 +39,7 @@ const HomePage = () => {
     setUserId(storedUserId);  // Set userId from localStorage
 
     if (storedUserId) {
-      axios.get(`https://backend-delta-nine-60.vercel.app/${storedUserId}`)
+      axios.get(`https://backend-delta-nine-60.vercel.app/api/users${storedUserId}`)
         .then(res => {
           setUserInfo(res.data);
         })
@@ -74,7 +74,7 @@ const HomePage = () => {
    
 
     try {
-      const response = await axios.post('https://backend-delta-nine-60.vercel.app/', {
+      const response = await axios.post('https://backend-delta-nine-60.vercel.app/api/orders', {
         userId,
         name,
         address,
