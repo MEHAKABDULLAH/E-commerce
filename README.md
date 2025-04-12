@@ -1,15 +1,15 @@
-💎 Jewelry E-Commerce App
+💎 Jewellery E-Commerce App
 A simple yet elegant e-commerce web application for jewelry shopping — complete with user authentication, a clean UI, and full admin control over product management.
 
 ✨ Overview
-This project is a small-scale jewelry e-commerce platform where users can browse beautiful products and place orders after signing in. The application ensures smooth user experience and secure operations, both on the customer and admin side.
+This project is a small-scale jewellery e-commerce platform where users can browse beautiful products and place orders after signing in. The application ensures smooth user experience and secure operations, both on the customer and admin side.
 
 🔐 Features
 User Authentication:
 Users can sign up and log in securely to access shopping features.
 
 Product Display:
-All jewelry products are stored in MongoDB and fetched in real-time for display on the front end.
+All jewellery products are stored in MongoDB and fetched in real-time for display on the front end.
 
 Admin Dashboard:
 Admins have full control to:
